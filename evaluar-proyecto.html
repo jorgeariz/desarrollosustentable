@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Desarrollo Sustentable</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Righteous&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area ">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="index.html">
+            <img src="images/logo.png" alt="" />
+          </a>
+          <div class="" id="">
+            <div class="User_option">
+              <form class="form-inline my-2  mb-3 mb-lg-0">
+                <input type="search" placeholder="Search" />
+                <button class="btn   my-sm-0 nav_search-btn" type="submit"></button>
+              </form>
+            </div>
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1"> </span>
+                <span class="s-2"> </span>
+                <span class="s-3"> </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                  <a href="index.html">Inicio</a>
+                  <a href="evaluar-proyecto.html">Evaluador de proyectos</a>
+                  <a href="calculo-carbono.html">Calculadora de carbono </a>
+                  <a href="recomendaciones.html">Recomendaciones</a>
+                  <a href="biblioteca.html">Biblioteca de recursos</a>
+                  <a href="noticias.html">Noticias</a>
+                  <a href="blog.html">Blog</a>
+              </div>
+            </div>          
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 col-lg-4 offset-md-1">
+          <div class="form_container">
+            <div class="heading_container">
+              <h2>Evaluar un Proyecto Sustentable</h2>
+              <h3>Información General del Proyecto</h3>
+            </div>
+            <form id="evaluationForm" action="" method="POST">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombre del proyecto" name="nombreProyecto" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Sector o industria" name="industria" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Objetivo" name="objetivo" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Duración estimada" name="duracion" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Ubicación geográfica" name="ubicacion" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Normativas" name="normativas" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Impacto social" name="impactoSocial" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Impacto económico" name="impactoEconomico" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Impacto ambiental" name="impactoAmbiental" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Propósito del proyecto" name="propositoDelProyecto" required />
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Características del proyecto" name="caracteristicasDelProyecto" required />
+              </div>
+  
+              <h3>Presupuesto</h3>
+              <div class="form-group">
+                <input type="number" class="form-control" placeholder="Presupuesto inicial" name="presupuestoIni" required />
+              </div>
+  
+              <div class="d-flex">
+                <button type="button" class="btn btn-secondary" id="generatePdfBtn">
+                  Generar PDF
+                </button>
+                <button type="button" class="btn btn-success ml-2" id="evaluateBtn">
+                  Evaluar
+                </button>
+              </div>
+              <div id="evaluationResult" style="margin-top: 20px; font-weight: bold;"></div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-7 px-0">
+          <div class="map_container">
+            <div class="map">
+              <div id="googleMap" style="width: 100%; height: 400px;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <!-- end contact section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section  layout_padding2">
+    <div class="footer_img fi1">
+      <img src="images/footer-animal1.png" alt="">
+    </div>
+    <div class="footer_img fi2">
+      <img src="images/footer-animal2.png" alt="">
+    </div>
+    <div class="container">
+      <div class="social_container">
+        <div class="social_box">
+          <a href="">
+            <img src="images/fb.png" alt="">
+          </a>
+          <a href="">
+            <img src="images/twitter.png" alt="">
+          </a>
+          <a href="">
+            <img src="images/linkedin.png" alt="">
+          </a>
+          <a href="">
+            <img src="images/instagram.png" alt="">
+          </a>
+          <a href="">
+            <img src="images/youtube.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="contact_items">
+        <a href="">
+          <div class="item ">
+            <div class="img-box ">
+              <img src="images/location.png" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                Quintna Roo, Felipe Carrillo Puerto
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="item ">
+            <div class="img-box ">
+              <img src="images/call.png" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                Tel +01 1234567890
+              </p>
+            </div>
+          </div>
+        </a>
+        <a href="">
+          <div class="item ">
+            <div class="img-box ">
+              <img src="images/mail.png" alt="">
+            </div>
+            <div class="detail-box">
+              <p>
+                demo@gmail.com
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="info_container ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 ">
+            <h6>
+              Acerca de
+            </h6>
+            <p>
+              Aquí podrás calcular tu huella de carbono, evaluar proyectos sustentables y acceder a recursos que promueven prácticas responsables. Te invitamos a ser parte de un futuro más sostenible y equilibrado. </p>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h6>
+              Enlace útil
+            </h6>
+            <div class="info_link-box">
+              <ul>
+                <li class="active">
+                  <a href="index.html">
+                    Inicio
+                  </a>
+                </li>
+                <li>
+                  <a href="nosotros.html">
+                    Nosotros
+                  </a>
+                </li>
+                <li>
+                  <a href="donar.html">
+                    Donar
+                  </a>
+                </li>
+                <li>
+                  <a href="contacto.html">
+                    Contáctanos
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center">
+            <h6>
+              Sistema evaluador de proyectos
+            </h6>
+            <p>
+              La evaluación de proyectos sirve para analizar la viabilidad, impacto y sostenibilidad de un proyecto, ayudando a tomar decisiones informadas sobre su implementación y mejora.
+            </p>
+          </div>
+          <div class="col-md-6 col-lg-3 text-center">
+            <h6>
+              Calculadora de Carbono
+            </h6>
+            <p>
+              La calculadora de huella de carbono estima las emisiones de gases de efecto invernadero de actividades humanas, ayudando a medir y reducir su impacto ambiental. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <p>
+      &copy; <span id="displayDate"></span> Diseñado por
+      <a href="#">TecNM DS3ISC </a>
+    </p>
+  </section>
+  <!-- end  footer section -->
+
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+<!-- Agregar la librería jsPDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- Agregar jsPDF Script -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+  // Código JavaScript para generar PDF
+  document.getElementById("generatePdfBtn").addEventListener("click", function() {
+      const { jsPDF } = window.jspdf;
+      const doc = new jsPDF();
+
+      const nombreProyecto = document.querySelector('[name="nombreProyecto"]').value;
+      const industria = document.querySelector('[name="industria"]').value;
+      const objetivo = document.querySelector('[name="objetivo"]').value;
+      const duracion = document.querySelector('[name="duracion"]').value;
+      const ubicacion = document.querySelector('[name="ubicacion"]').value;
+      const normativas = document.querySelector('[name="normativas"]').value;
+      const impactoSocial = document.querySelector('[name="impactoSocial"]').value;
+      const impactoEconomico = document.querySelector('[name="impactoEconomico"]').value;
+      const impactoAmbiental = document.querySelector('[name="impactoAmbiental"]').value;
+      const propositoDelProyecto = document.querySelector('[name="propositoDelProyecto"]').value;
+      const caracteristicasDelProyecto = document.querySelector('[name="caracteristicasDelProyecto"]').value;
+      const presupuestoIni = document.querySelector('[name="presupuestoIni"]').value;
+
+      doc.text("Evaluación de Proyecto Sustentable", 20, 20);
+      doc.text("Nombre del Proyecto: " + nombreProyecto, 20, 30);
+      doc.text("Sector o Industria: " + industria, 20, 40);
+      doc.text("Objetivo: " + objetivo, 20, 50);
+      doc.text("Duración Estimada: " + duracion, 20, 60);
+      doc.text("Ubicación Geográfica: " + ubicacion, 20, 70);
+      doc.text("Normativas: " + normativas, 20, 80);
+      doc.text("Impacto Social: " + impactoSocial, 20, 90);
+      doc.text("Impacto Económico: " + impactoEconomico, 20, 100);
+      doc.text("Impacto Ambiental: " + impactoAmbiental, 20, 110);
+      doc.text("Propósito del Proyecto: " + propositoDelProyecto, 20, 120);
+      doc.text("Características del Proyecto: " + caracteristicasDelProyecto, 20, 130);
+      doc.text("Presupuesto Inicial: " + presupuestoIni, 20, 140);
+
+      doc.save("proyecto_sustentable.pdf");
+    });
+  </script>
+
+</body>
+
+</html>
